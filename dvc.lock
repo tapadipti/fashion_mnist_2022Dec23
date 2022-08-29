@@ -24,15 +24,15 @@ stages:
         train.batch_size: 128
         train.dropout: 0.4
         train.hidden_units: 64
-        train.lr: 0.01
+        train.lr: 0.001
         train.num_epochs: 1
     outs:
     - path: output/model.h5
-      md5: dc45b9c38d50bc8f277a7c178fa4eea7
+      md5: 0a663296053c9e8ce2008d608b6387d7
       size: 3680480
     - path: output/train_logs.csv
-      md5: 5462c3db950eef3a6256acace18397d6
-      size: 59
+      md5: 2fed2db611fc60f44d6dbb734d5cbf81
+      size: 60
   evaluate:
     cmd: python src/evaluate.py
     deps:
